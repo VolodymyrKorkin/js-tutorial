@@ -188,7 +188,43 @@ alert( a == b ); // true
 // alert( new A() == new B() ); // true
 
 // Если функция возвращает объект, то вместо this будет возвращён этот объект.
-// Например, они могут вернуть один и тот же объект obj, определённый снаружи
+// Например, они могут вернуть один и тот же объект obj, определённый снаружи.
 
+/* Задача 4.5.2 Создание калькулятора при помощи конструктора
+Создайте функцию-конструктор Calculator, который создаёт объекты с тремя методами:
 
+read() запрашивает два значения при помощи prompt и сохраняет их значение в свойствах объекта.
+sum() возвращает сумму введённых свойств.
+mul() возвращает произведение введённых свойств.
+
+Например:
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+*/
+
+// function Calculator() {
+// 
+//   this.read = function() {
+//     this.firstNumber = +prompt('Введите первое число?', '0');
+//     this.secondNumber = +prompt('Введите второе число?', '0');	
+//   };
+// 
+//   this.sum = function() {
+//     return this.firstNumber + this.secondNumber;
+//   };
+// 
+//   this.mul = function() {
+//     return this.firstNumber * this.secondNumber;
+//   };
+// 
+// }
+// 
+// let calculator = new Calculator();
+// calculator.read();
+// 
+// alert( "Sum=" + calculator.sum() );
+// alert( "Mul=" + calculator.mul() );
 
