@@ -416,3 +416,67 @@
 
 // alert( 'Österreich'.localeCompare('Zealand') ); // -1
 
+
+// ***ЗАДАЧИ***
+
+
+/* 5.3.1 Задача. Сделать первый символ заглавным.
+Напишите функцию ucFirst(str), 
+возвращающую строку str с заглавным первым символом. 
+Например:
+ucFirst("вася") == "Вася"; 
+*/
+
+// function ucFirst(str) {
+//   if (!str) return str;
+// 
+//   return str[0].toUpperCase() + str.slice(1);
+// }
+// 
+// let a = 'вася';
+// 
+// alert (ucFirst(a))
+
+/* 5.3.2 Задача. Проверка на спам
+Напишите функцию checkSpam(str), 
+возвращающую true, если str содержит 'viagra' или 'XXX', 
+а иначе false.
+
+Функция должна быть нечувствительна к регистру:
+checkSpam('buy ViAgRA now') == true
+checkSpam('free xxxxx') == true
+checkSpam("innocent rabbit") == false
+*/
+
+// function checkSpam(str) {
+//   let strLower = str.toLowerCase();
+// 
+//   return (strLower.includes('viagra') || strLower.includes('xxx') ? true : false); 
+// }
+
+// РЕШЕНИЕ ИЗ КНИГИ
+
+// function checkSpam(str) {
+//   let lowerStr = str.toLowerCase();
+// 
+//   return lowerStr.includes('viagra') || lowerStr.includes('xxx'); // (без ?, :)
+// }
+
+/* 5.3.3 Задача. Усечение строки
+Создайте функцию truncate(str, maxlength), 
+которая проверяет длину строки str и, 
+если она превосходит maxlength, заменяет конец str на "…", 
+так, чтобы её длина стала равна maxlength.
+
+Результатом функции должна быть 
+та же строка, если усечение не требуется, либо, 
+если необходимо, усечённая строка:
+
+truncate("Вот, что мне хотелось бы сказать на эту тему:", 20) = "Вот, что мне хотело…"
+truncate("Всем привет!", 20) = "Всем привет!"
+*/
+
+function truncate(str, maxlength) {
+  return (str.length <= maxlength) ?
+  str : str.slice(0, maxlength - 1) + '…';
+}
