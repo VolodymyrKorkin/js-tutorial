@@ -476,7 +476,22 @@ truncate("Вот, что мне хотелось бы сказать на эту
 truncate("Всем привет!", 20) = "Всем привет!"
 */
 
-function truncate(str, maxlength) {
-  return (str.length <= maxlength) ?
-  str : str.slice(0, maxlength - 1) + '…';
-}
+// function truncate(str, maxlength) {
+//   return (str.length <= maxlength) ?
+//   str : str.slice(0, maxlength - 1) + '…';
+// }
+
+/* 5.3.4 Задача. Выделить число
+Есть стоимость в виде строки "$120". 
+То есть сначала идёт знак валюты, а затем – число.
+Создайте функцию extractCurrencyValue(str), 
+которая будет из такой строки выделять числовое значение 
+и возвращать его.
+
+alert( extractCurrencyValue('$120') === 120 ); // true
+*/
+
+// function extractCurrencyValue(str) {
+//   return +str.slice(1);
+// }
+
